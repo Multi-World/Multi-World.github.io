@@ -1,0 +1,233 @@
+/* MultiWorld Project Page Styles */
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #4A90D9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #357abd;
+}
+
+/* Container adjustments */
+.container.is-max-desktop {
+    max-width: 960px;
+}
+
+/* Section spacing */
+.section {
+    padding: 3rem 1.5rem;
+}
+
+/* Button enhancements */
+.button {
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Image responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-container video,
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-padding-top: 20px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Loading animation for placeholders */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.placeholder-video {
+    animation: pulse 2s infinite;
+}
+
+/* Tooltip custom styles */
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    z-index: 100;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 1.75rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .author-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric-table {
+        font-size: 0.8rem;
+    }
+    
+    .metric-table th,
+    .metric-table td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    pre {
+        font-size: 0.75rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .btn-custom {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 200px;
+    }
+    
+    .method-card {
+        padding: 1.5rem;
+    }
+    
+    .abstract-box {
+        padding: 1.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero-section {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .btn-custom {
+        display: none;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #4A90D9;
+    outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+    background: rgba(74, 144, 217, 0.3);
+    color: inherit;
+}
